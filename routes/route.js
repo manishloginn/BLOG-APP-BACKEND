@@ -7,6 +7,7 @@ const { folower } = require('../controler/folower')
 const { loginuser } = require('../controler/loginuser')
 const { getUser } = require('../controler/getUser')
 const { getblog } = require('../controler/getblog')
+const { allusers } = require('../controler/allusers')
 const router = express.Router()
 
 
@@ -19,6 +20,7 @@ router.post('/userregister', Registeruser)
 .post('/folower', folower)
 .get('/loginuserDetail', getUser)
 .get('/getblog', getblog)
+.get('/allusers' , allusers)
 
 
 module.exports = router
