@@ -36,14 +36,14 @@ const userSchema = new Schema({
     folowers: [
         {
             type: mongoose.Types.ObjectId,
-            ref: 'User',
+            ref: 'user',
             required:true,
         }
     ],
     folowing: [
         {
             type: mongoose.Types.ObjectId,
-            ref: 'User',
+            ref: 'user',
             required:true,
         }
     ]
