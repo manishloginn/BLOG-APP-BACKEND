@@ -3,6 +3,7 @@ const { blogValidator } = require("../utils/blogValidator");
 
 const AddBlog = async (req, res) => {
     const {textBody, userId, img } = req.body;
+    console.log(textBody, userId)
     try {
         await blogValidator({textBody, userId })
     } catch (error) {

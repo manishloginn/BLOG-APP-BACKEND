@@ -9,12 +9,12 @@ const getblog = async (req, res) => {
     if (!userid) {
         return res.status(500).json('no user login')
     }
-
     try {
         const findBlog = await blogSchema
             .find({ userId: userid })
             .populate("userId", "name email")
-            .populate("comments.user", "name email");
+            .populate("comments.user", "name email")
+            .sort({ createdAt: -1 });
 
         if (!findBlog || findBlog.length === 0) {
             return res.status(404).json({ message: "No blogs found" });

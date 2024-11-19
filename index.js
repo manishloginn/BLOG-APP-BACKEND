@@ -10,6 +10,7 @@ const PORT = process.env.PORT
 
 const corsOptions = {
     origin: 'https://blog-app-frontend-six-mu.vercel.app', // Replace with the origin of your frontend
+    // origin: 'http://localhost:3000', // Replace with the origin of your frontend
     credentials: true,              // Allows cookies to be sent and received
 };
 
